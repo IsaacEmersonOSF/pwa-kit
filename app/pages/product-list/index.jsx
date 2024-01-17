@@ -47,6 +47,7 @@ import {
 
 // Project Components
 import Pagination from '@salesforce/retail-react-app/app/components/pagination'
+import LoadMore from '@salesforce/retail-react-app/app/components/load-more'
 import ProductTile, {
     Skeleton as ProductTileSkeleton
 } from '@salesforce/retail-react-app/app/components/product-tile'
@@ -569,6 +570,7 @@ const ProductList = (props) => {
                                 paddingTop={8}
                             >
                                 <Pagination currentURL={basePath} urls={pageUrls} />
+                                <LoadMore currentURL={basePath} urls={pageUrls} />
 
                                 {/*
                             Our design doesn't call for a page size select. Show this element if you want
