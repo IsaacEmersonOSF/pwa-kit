@@ -1,6 +1,6 @@
 {
   "name": "client",
-  "hash": "dff0564b1399ead93f7c",
+  "hash": "db7af6943b253178c867",
   "publicPath": "/mobify/bundle/development/",
   "outputPath": "/Users/isaacemerson/Documents/GitHub/new-project/retail-react-app/build",
   "assetsByChunkName": {
@@ -206,7 +206,7 @@
     {
       "type": "asset",
       "name": "app_components_product-view_index_jsx.js",
-      "size": 71028,
+      "size": 72587,
       "emitted": false,
       "comparedForEmit": false,
       "cached": true,
@@ -348,7 +348,7 @@
     {
       "type": "asset",
       "name": "pages-product-detail.js",
-      "size": 40163,
+      "size": 41374,
       "emitted": false,
       "comparedForEmit": false,
       "cached": true,

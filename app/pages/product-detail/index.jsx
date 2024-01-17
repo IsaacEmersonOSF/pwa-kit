@@ -158,6 +158,39 @@ const ProductDetail = () => {
         'createCustomerProductListItem'
     )
 
+    const deleteCustomerProductListItem = useShopperCustomersMutation(
+        'deleteCustomerProductListItem'
+    )
+
+    const removeItemFromWishlist = async (wishListId, wishlistItemId) => {
+        try {
+            const promise = deleteCustomerProductListItem.mutateAsync({
+                parameters: {
+                    customerId: customerId,
+                    listId: wishListId,
+                    itemId: wishlistItemId
+                }
+            })
+
+            await promise
+
+            toast({
+                title: formatMessage({
+                    defaultMessage: 'Item removed from wishlist',
+                    id: 'wishlist_secondary_button_group.info.item_removed'
+                }),
+                status: 'info',
+                action: (
+                    <Button variant="link" onClick={() => navigate('/account/wishlist')}>
+                        {formatMessage(TOAST_ACTION_VIEW_WISHLIST)}
+                    </Button>
+                )
+            })
+        } catch {
+            toast({title: formatMessage(API_ERROR_MESSAGE), status: 'error'})
+        }
+    }
+
     const handleAddToWishlist = (product, variant, quantity) => {
         const isItemInWishlist = wishlist?.customerProductListItems?.find(
             (i) => i.productId === variant?.productId || i.productId === product?.id
@@ -205,15 +238,7 @@ const ProductDetail = () => {
                 }
             )
         } else {
-            toast({
-                title: formatMessage(TOAST_MESSAGE_ALREADY_IN_WISHLIST),
-                status: 'info',
-                action: (
-                    <Button variant="link" onClick={() => navigate('/account/wishlist')}>
-                        {formatMessage(TOAST_ACTION_VIEW_WISHLIST)}
-                    </Button>
-                )
-            })
+            removeItemFromWishlist(wishlist.id, isItemInWishlist.id)
         }
     }
 

@@ -23,6 +23,7 @@ import {
 } from '@salesforce/retail-react-app/app/components/shared/ui'
 import {useDerivedProduct} from '@salesforce/retail-react-app/app/hooks'
 import {useAddToCartModalContext} from '@salesforce/retail-react-app/app/hooks/use-add-to-cart-modal'
+import {useWishList} from '@salesforce/retail-react-app/app/hooks/use-wish-list'
 
 // project components
 import SwatchGroup from '@salesforce/retail-react-app/app/components/swatch-group'
@@ -130,6 +131,8 @@ const ProductView = forwardRef(
         const canAddToWishlist = !isProductLoading
         const isProductASet = product?.type.set
         const errorContainerRef = useRef(null)
+        const [isItemInWishlist, setIsItemInWishlist] = useState(false)
+        const {data: wishlist} = useWishList()
 
         const validateAndShowError = (opts = {}) => {
             const {scrollErrorIntoView = true} = opts
@@ -168,6 +171,10 @@ const ProductView = forwardRef(
                 addToWishlist: intl.formatMessage({
                     defaultMessage: 'Add to Wishlist',
                     id: 'product_view.button.add_to_wishlist'
+                }),
+                removeFromWishlist: intl.formatMessage({
+                    defaultMessage: 'Remove from Wishlist',
+                    id: 'product_view.button.remove_from_wishlist'
                 }),
                 addSetToWishlist: intl.formatMessage({
                     defaultMessage: 'Add Set to Wishlist',
@@ -247,13 +254,15 @@ const ProductView = forwardRef(
                         disabled={isWishlistLoading || !canAddToWishlist}
                         isLoading={isWishlistLoading}
                         width="100%"
-                        variant="outline"
+                        variant={isItemInWishlist ? 'solid' : 'outline'}
                         marginBottom={4}
                     >
                         {updateWishlist
                             ? buttonText.update
                             : isProductASet
                             ? buttonText.addSetToWishlist
+                            : isItemInWishlist
+                            ? buttonText.removeFromWishlist
                             : buttonText.addToWishlist}
                     </ButtonWithRegistration>
                 )
@@ -285,6 +294,15 @@ const ProductView = forwardRef(
                 onVariantSelected(product, variant, quantity)
             }
         }, [variant?.productId, quantity])
+
+        // eslint-disable-next-line use-effect-no-deps/use-effect-no-deps
+        useEffect(() => {
+            const isItemInWishlist = wishlist?.customerProductListItems?.find(
+                (i) => i.productId === variant?.productId || i.productId === product?.id
+            )
+
+            setIsItemInWishlist(isItemInWishlist)
+        })
 
         return (
             <Flex direction={'column'} data-testid="product-view" ref={ref}>
