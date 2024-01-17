@@ -1,11 +1,12 @@
 {
   "name": "client",
-  "hash": "db7af6943b253178c867",
+  "hash": "47a3c813fabb8b0ab8dc",
   "publicPath": "/mobify/bundle/development/",
   "outputPath": "/Users/isaacemerson/Documents/GitHub/new-project/retail-react-app/build",
   "assetsByChunkName": {
     "main": [
-      "main.js"
+      "main.js",
+      "main.4eba6117b61ea8c43afa.hot-update.js"
     ],
     "pages-home": [
       "pages-home.js"
@@ -23,7 +24,8 @@
       "pages-account.js"
     ],
     "pages-cart": [
-      "pages-cart.js"
+      "pages-cart.js",
+      "pages-cart.4eba6117b61ea8c43afa.hot-update.js"
     ],
     "pages-checkout": [
       "pages-checkout.js"
@@ -81,7 +83,7 @@
     {
       "type": "asset",
       "name": "main.js",
-      "size": 1182513,
+      "size": 1271845,
       "emitted": false,
       "comparedForEmit": false,
       "cached": true,
@@ -156,7 +158,7 @@
     {
       "type": "asset",
       "name": "pages-product-list.js",
-      "size": 130165,
+      "size": 123721,
       "emitted": false,
       "comparedForEmit": false,
       "cached": true,
@@ -200,29 +202,6 @@
       "filteredRelated": 1,
       "chunks": [
         "pages-cart"
-      ],
-      "auxiliaryChunks": []
-    },
-    {
-      "type": "asset",
-      "name": "app_components_product-view_index_jsx.js",
-      "size": 72587,
-      "emitted": false,
-      "comparedForEmit": false,
-      "cached": true,
-      "info": {
-        "javascriptModule": false,
-        "related": {
-          "sourceMap": "app_components_product-view_index_jsx.js.map"
-        }
-      },
-      "chunkNames": [],
-      "chunkIdHints": [],
-      "auxiliaryChunkNames": [],
-      "auxiliaryChunkIdHints": [],
-      "filteredRelated": 1,
-      "chunks": [
-        "app_components_product-view_index_jsx"
       ],
       "auxiliaryChunks": []
     },
@@ -397,15 +376,42 @@
     },
     {
       "type": "asset",
-      "name": "app_components_confirmation-modal_index_jsx-app_components_product-item_index_jsx-app_compone-5d0c1c.js",
-      "size": 38284,
+      "name": "pages-cart.4eba6117b61ea8c43afa.hot-update.js",
+      "size": 34888,
+      "emitted": false,
+      "comparedForEmit": false,
+      "cached": true,
+      "info": {
+        "hotModuleReplacement": true,
+        "immutable": true,
+        "fullhash": "4eba6117b61ea8c43afa",
+        "related": {
+          "sourceMap": "pages-cart.4eba6117b61ea8c43afa.hot-update.js.map"
+        }
+      },
+      "chunkNames": [
+        "pages-cart"
+      ],
+      "chunkIdHints": [],
+      "auxiliaryChunkNames": [],
+      "auxiliaryChunkIdHints": [],
+      "filteredRelated": 1,
+      "chunks": [
+        "pages-cart"
+      ],
+      "auxiliaryChunks": []
+    },
+    {
+      "type": "asset",
+      "name": "app_components_confirmation-modal_index_jsx-app_components_product-item_index_jsx.js",
+      "size": 23125,
       "emitted": false,
       "comparedForEmit": false,
       "cached": true,
       "info": {
         "javascriptModule": false,
         "related": {
-          "sourceMap": "app_components_confirmation-modal_index_jsx-app_components_product-item_index_jsx-app_compone-5d0c1c.js.map"
+          "sourceMap": "app_components_confirmation-modal_index_jsx-app_components_product-item_index_jsx.js.map"
         }
       },
       "chunkNames": [],
@@ -414,7 +420,7 @@
       "auxiliaryChunkIdHints": [],
       "filteredRelated": 1,
       "chunks": [
-        "app_components_confirmation-modal_index_jsx-app_components_product-item_index_jsx-app_compone-5d0c1c"
+        "app_components_confirmation-modal_index_jsx-app_components_product-item_index_jsx"
       ],
       "auxiliaryChunks": []
     },
@@ -545,6 +551,33 @@
     },
     {
       "type": "asset",
+      "name": "main.4eba6117b61ea8c43afa.hot-update.js",
+      "size": 365,
+      "emitted": false,
+      "comparedForEmit": false,
+      "cached": true,
+      "info": {
+        "hotModuleReplacement": true,
+        "immutable": true,
+        "fullhash": "4eba6117b61ea8c43afa",
+        "related": {
+          "sourceMap": "main.4eba6117b61ea8c43afa.hot-update.js.map"
+        }
+      },
+      "chunkNames": [
+        "main"
+      ],
+      "chunkIdHints": [],
+      "auxiliaryChunkNames": [],
+      "auxiliaryChunkIdHints": [],
+      "filteredRelated": 1,
+      "chunks": [
+        "main"
+      ],
+      "auxiliaryChunks": []
+    },
+    {
+      "type": "asset",
       "name": "_1242.js",
       "size": 284,
       "emitted": false,
@@ -565,6 +598,25 @@
         "_1242"
       ],
       "auxiliaryChunks": []
+    },
+    {
+      "type": "asset",
+      "name": "main.4eba6117b61ea8c43afa.hot-update.json",
+      "size": 41,
+      "emitted": false,
+      "comparedForEmit": false,
+      "cached": true,
+      "info": {
+        "hotModuleReplacement": true,
+        "immutable": true,
+        "fullhash": "4eba6117b61ea8c43afa"
+      },
+      "chunkNames": [],
+      "chunkIdHints": [],
+      "auxiliaryChunkNames": [],
+      "auxiliaryChunkIdHints": [],
+      "chunks": [],
+      "auxiliaryChunks": []
     }
   ],
   "namedChunkGroups": {
@@ -580,11 +632,14 @@
         },
         {
           "name": "main.js"
+        },
+        {
+          "name": "main.4eba6117b61ea8c43afa.hot-update.js"
         }
       ],
       "filteredAssets": 0,
       "assetsSize": null,
-      "filteredAuxiliaryAssets": 2,
+      "filteredAuxiliaryAssets": 3,
       "auxiliaryAssetsSize": null,
       "children": {},
       "childAssets": {}
@@ -661,9 +716,8 @@
       "name": "pages-account",
       "chunks": [
         "app_components_item-variant_item-attributes_jsx-app_components_item-variant_item-image_jsx-ap-c1a2e1",
-        "app_components_product-view_index_jsx",
         "app_components_order-summary_index_jsx",
-        "app_components_confirmation-modal_index_jsx-app_components_product-item_index_jsx-app_compone-5d0c1c",
+        "app_components_confirmation-modal_index_jsx-app_components_product-item_index_jsx",
         "app_components_action-card_index_jsx-app_components_address-display_index_jsx-app_components_-8b77ee",
         "pages-account-wishlist",
         "pages-account"
@@ -673,13 +727,10 @@
           "name": "app_components_item-variant_item-attributes_jsx-app_components_item-variant_item-image_jsx-ap-c1a2e1.js"
         },
         {
-          "name": "app_components_product-view_index_jsx.js"
-        },
-        {
           "name": "app_components_order-summary_index_jsx.js"
         },
         {
-          "name": "app_components_confirmation-modal_index_jsx-app_components_product-item_index_jsx-app_compone-5d0c1c.js"
+          "name": "app_components_confirmation-modal_index_jsx-app_components_product-item_index_jsx.js"
         },
         {
           "name": "app_components_action-card_index_jsx-app_components_address-display_index_jsx-app_components_-8b77ee.js"
@@ -693,7 +744,7 @@
       ],
       "filteredAssets": 0,
       "assetsSize": null,
-      "filteredAuxiliaryAssets": 7,
+      "filteredAuxiliaryAssets": 6,
       "auxiliaryAssetsSize": null,
       "children": {},
       "childAssets": {}
@@ -702,9 +753,8 @@
       "name": "pages-cart",
       "chunks": [
         "app_components_item-variant_item-attributes_jsx-app_components_item-variant_item-image_jsx-ap-c1a2e1",
-        "app_components_product-view_index_jsx",
         "app_components_order-summary_index_jsx",
-        "app_components_confirmation-modal_index_jsx-app_components_product-item_index_jsx-app_compone-5d0c1c",
+        "app_components_confirmation-modal_index_jsx-app_components_product-item_index_jsx",
         "pages-cart"
       ],
       "assets": [
@@ -712,16 +762,16 @@
           "name": "app_components_item-variant_item-attributes_jsx-app_components_item-variant_item-image_jsx-ap-c1a2e1.js"
         },
         {
-          "name": "app_components_product-view_index_jsx.js"
-        },
-        {
           "name": "app_components_order-summary_index_jsx.js"
         },
         {
-          "name": "app_components_confirmation-modal_index_jsx-app_components_product-item_index_jsx-app_compone-5d0c1c.js"
+          "name": "app_components_confirmation-modal_index_jsx-app_components_product-item_index_jsx.js"
         },
         {
           "name": "pages-cart.js"
+        },
+        {
+          "name": "pages-cart.4eba6117b61ea8c43afa.hot-update.js"
         }
       ],
       "filteredAssets": 0,
@@ -805,20 +855,16 @@
     "pages-product-detail": {
       "name": "pages-product-detail",
       "chunks": [
-        "app_components_product-view_index_jsx",
         "pages-product-detail"
       ],
       "assets": [
-        {
-          "name": "app_components_product-view_index_jsx.js"
-        },
         {
           "name": "pages-product-detail.js"
         }
       ],
       "filteredAssets": 0,
       "assetsSize": null,
-      "filteredAuxiliaryAssets": 2,
+      "filteredAuxiliaryAssets": 1,
       "auxiliaryAssetsSize": null,
       "children": {},
       "childAssets": {}
@@ -844,8 +890,7 @@
       "name": "pages-account-wishlist",
       "chunks": [
         "app_components_item-variant_item-attributes_jsx-app_components_item-variant_item-image_jsx-ap-c1a2e1",
-        "app_components_product-view_index_jsx",
-        "app_components_confirmation-modal_index_jsx-app_components_product-item_index_jsx-app_compone-5d0c1c",
+        "app_components_confirmation-modal_index_jsx-app_components_product-item_index_jsx",
         "pages-account-wishlist"
       ],
       "assets": [
@@ -853,10 +898,7 @@
           "name": "app_components_item-variant_item-attributes_jsx-app_components_item-variant_item-image_jsx-ap-c1a2e1.js"
         },
         {
-          "name": "app_components_product-view_index_jsx.js"
-        },
-        {
-          "name": "app_components_confirmation-modal_index_jsx-app_components_product-item_index_jsx-app_compone-5d0c1c.js"
+          "name": "app_components_confirmation-modal_index_jsx-app_components_product-item_index_jsx.js"
         },
         {
           "name": "pages-account-wishlist.js"
@@ -864,7 +906,7 @@
       ],
       "filteredAssets": 0,
       "assetsSize": null,
-      "filteredAuxiliaryAssets": 4,
+      "filteredAuxiliaryAssets": 3,
       "auxiliaryAssetsSize": null,
       "children": {},
       "childAssets": {}
@@ -892,7 +934,8 @@
     {
       "id": "main",
       "files": [
-        "main.js"
+        "main.js",
+        "main.4eba6117b61ea8c43afa.hot-update.js"
       ]
     },
     {
@@ -934,7 +977,8 @@
     {
       "id": "pages-cart",
       "files": [
-        "pages-cart.js"
+        "pages-cart.js",
+        "pages-cart.4eba6117b61ea8c43afa.hot-update.js"
       ]
     },
     {
@@ -992,21 +1036,15 @@
       ]
     },
     {
-      "id": "app_components_product-view_index_jsx",
-      "files": [
-        "app_components_product-view_index_jsx.js"
-      ]
-    },
-    {
       "id": "app_components_order-summary_index_jsx",
       "files": [
         "app_components_order-summary_index_jsx.js"
       ]
     },
     {
-      "id": "app_components_confirmation-modal_index_jsx-app_components_product-item_index_jsx-app_compone-5d0c1c",
+      "id": "app_components_confirmation-modal_index_jsx-app_components_product-item_index_jsx",
       "files": [
-        "app_components_confirmation-modal_index_jsx-app_components_product-item_index_jsx-app_compone-5d0c1c.js"
+        "app_components_confirmation-modal_index_jsx-app_components_product-item_index_jsx.js"
       ]
     },
     {

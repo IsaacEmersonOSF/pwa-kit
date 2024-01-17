@@ -17,9 +17,12 @@ import {
     Text,
     Stack,
     useMultiStyleConfig,
-    IconButton
+    IconButton,
+    Button,
+    useDisclosure
 } from '@salesforce/retail-react-app/app/components/shared/ui'
 import DynamicImage from '@salesforce/retail-react-app/app/components/dynamic-image'
+import ProductViewModal from '@salesforce/retail-react-app/app/components/product-view-modal'
 
 // Hooks
 import {useIntl} from 'react-intl'
@@ -29,6 +32,7 @@ import {productUrlBuilder} from '@salesforce/retail-react-app/app/utils/url'
 import Link from '@salesforce/retail-react-app/app/components/link'
 import withRegistration from '@salesforce/retail-react-app/app/components/with-registration'
 import {useCurrency} from '@salesforce/retail-react-app/app/hooks'
+import {useProduct} from '@salesforce/commerce-sdk-react'
 
 const IconButtonWithRegistration = withRegistration(IconButton)
 
@@ -77,6 +81,19 @@ const ProductTile = (props) => {
     const {currency: activeCurrency} = useCurrency()
     const isFavouriteLoading = useRef(false)
     const styles = useMultiStyleConfig('ProductTile')
+    const {isOpen, onOpen, onClose} = useDisclosure()
+
+    const {
+        data: productFull,
+        isLoading: isProductLoading,
+        isError: isProductError,
+        error: productError
+    } = useProduct({
+        parameters: {
+            id: productId,
+            allImages: true
+        }
+    })
 
     return (
         <Box {...styles.container}>
@@ -125,6 +142,28 @@ const ProductTile = (props) => {
                           })}
                 </Text>
             </Link>
+            <Button
+                key="quickview"
+                onClick={() => {
+                    console.log(productFull)
+                    onOpen()
+                }}
+                width="100%"
+                variant="solid"
+                marginTop={4}
+            >
+                QuickView
+            </Button>
+            <Box>
+                {isOpen && (
+                    <ProductViewModal
+                        isOpen={isOpen}
+                        onOpen={onOpen}
+                        onClose={onClose}
+                        product={productFull}
+                    />
+                )}
+            </Box>
             {enableFavourite && (
                 <Box
                     onClick={(e) => {
